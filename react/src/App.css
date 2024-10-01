@@ -1,0 +1,228 @@
+/* General Body Settings */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+
+  display: auto;
+  flex-direction: auto;
+  align-items: auto;
+  justify-content: auto;
+}
+
+/* Container for all content */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Full width header */
+.app-header {
+  background-color: #ff5e57;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Flexbox for search bar centering */
+.search-form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-form button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Recipe List Layout - Responsive Grid */
+.recipe-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 100%; */
+  /* max-width: 1200px; */
+  /* margin: 20px auto; */
+}
+
+.recipe-list-container>div {
+  flex: 1 0 33%;
+  max-width: 33%;
+
+}
+
+.recipe-list-container>div:only-child {
+  flex: 1 0 100%;
+  max-width: 100%;
+}
+
+.recipe-item {
+  background-color: brown;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.recipe-item-options {
+  background-color: rgb(18, 6, 6);
+  color: white;
+  border-radius: 8px;
+  margin-inline: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  :hover {
+    transform: scale(1.05);
+  }
+}
+
+.recipe-item:hover {
+  transform: scale(1.05);
+}
+
+.recipe-list-details .image-container {
+  width: 200px;
+  height: 133px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe-list-details .image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  object-fit: cover;
+}
+
+.recipe-details {
+  background-color: brown;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  overflow: hidden;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.recipe-details ul {
+  display: flex;
+  list-style-type: disc;
+  justify-content: center;
+  font-weight: bold;
+  /* width: 20%; */
+  padding: 0;
+}
+
+.recipe-details ul li{
+  margin-inline: 20px;
+}
+
+.recipe-details h2 {
+  text-align: center;
+  color: black;
+  padding: 0;
+}
+
+/* Media Queries for Responsive Layout */
+@media (min-width: 768px) {
+  .search-form input {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-body {
+    display: flex;
+    justify-content: auto;
+    flex-direction: row;
+  }
+
+
+  .error {
+    color: red;
+    background: lightgrey;
+    font-size: 20px;
+  }
+
+  .welcome {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    /* Adds some space between fields */
+  }
+
+  form label {
+    width: 40%;
+    /* Adjust based on your design */
+  }
+
+  form input,
+  form textarea {
+    flex: 1;
+    margin-left: 10px;
+  }
+
+  textarea {
+    height: 100%;
+    /* Adjust the height of the textarea as needed */
+  }
+
+}
